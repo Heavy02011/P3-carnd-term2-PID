@@ -47,6 +47,7 @@ int main(int argc, char *argv[])
   //    -0.15 -0.0001 -1.0 video 2
   //    -0.15 -0.0001 -1.1 video 3
   //    -0.15 -0.000  -1.2 video 4
+  //.   -0.13 -0.0001 -0.8 video 6
   // ##### best values here #####
   double init_Kp = atof(argv[1]); //-0.5;
   double init_Ki = atof(argv[2]); //0.001;
