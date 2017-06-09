@@ -49,6 +49,17 @@ int main(int argc, char *argv[])
   //    -0.15 -0.000  -1.2 video 4
   //.   -0.13 -0.0001 -0.8 video 6
   // ##### best values here #####
+  /*
+  
+  ### Choosing Hyperparameters ###
+  
+  The approach was tweaking them manually.
+  Starting with Kp = 1, which resulted in an rising oszillation.
+  Following David Silvers video I then choose Kp = 0.5 and Kd = 0.5.
+  The oszillations were still there so I decreased Kp to get rid of to severe steering values and increased Kd to add more damping. 
+  
+  
+  */
   double init_Kp = atof(argv[1]); //-0.5;
   double init_Ki = atof(argv[2]); //0.001;
   double init_Kd = atof(argv[3]); //-0.5;
