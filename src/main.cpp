@@ -56,13 +56,18 @@ int main(int argc, char *argv[])
   The approach was tweaking them manually.
   Starting with Kp = 1, which resulted in an rising oszillation.
   Following David Silvers video I then choose Kp = 0.5 and Kd = 0.5.
-  The oszillations were still there so I decreased Kp to get rid of to severe steering values and increased Kd to add more damping. 
+  The oszillations were still there so I decreased Kp to get rid of to 
+  severe steering values and increased Kd to add more damping. 
+  The final parameters were choosen depicted in video6.mp4:
   
+  Kp = -0.13 
+  Ki = -0.0001
+  Kd = -0.8 
   
   */
-  double init_Kp = atof(argv[1]); //-0.5;
-  double init_Ki = atof(argv[2]); //0.001;
-  double init_Kd = atof(argv[3]); //-0.5;
+  double init_Kp = atof(argv[1]);
+  double init_Ki = atof(argv[2]);
+  double init_Kd = atof(argv[3]);
   pid.Init(init_Kp, init_Ki, init_Kd);
 
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
