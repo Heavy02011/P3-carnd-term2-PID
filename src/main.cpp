@@ -36,11 +36,17 @@ int main(int argc, char *argv[])
   
   // TODO: Initialize the pid variable. 
   //      -1.0 0.0  0.0
-  //      -0.5 0.0 -0.5
+  //      -0.5 0.0 -0.5 damping
   //      -0.3 0.0 -0.7
   //      -0.3 0.0 -0.9
-  //      -0.2 0.0 -0.9
+  //      -0.2 0.0 -0.9 more damping
   //      -0.2 0.0 -1.0
+  //    -0.15 -0.001 -1.0 video 5
+  //      -0.15 0.0 -1.0
+  //     -0.1 -0.0001 -1.0 video 1
+  //    -0.15 -0.0001 -1.0 video 2
+  //    -0.15 -0.0001 -1.1 video 3
+  //    -0.15 -0.000  -1.2 video 4
   // ##### best values here #####
   double init_Kp = atof(argv[1]); //-0.5;
   double init_Ki = atof(argv[2]); //0.001;
